@@ -14,5 +14,18 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+.profile {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+background-color: #021402;
+background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png");
+}
+
+.name {
+  color: aqua;
 }
