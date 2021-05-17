@@ -24,3 +24,17 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  background-color: inherit;
+  flex-direction: column;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid rgb(19, 17, 3);
+}

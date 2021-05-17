@@ -22,10 +22,11 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-background-color: #021402;
-background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png");
+  background-color: #021402;
+  background-image: url("https://www.transparenttextures.com/patterns/tileable-wood-colored.png");
 }
 
 .name {
   color: aqua;
+  font-size: 36px;
 }
