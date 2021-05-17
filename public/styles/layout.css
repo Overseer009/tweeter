@@ -33,8 +33,3 @@ main {
   flex-direction: column;
 }
 
-.details {
-  display: flex;
-  justify-content: space-between;
-  border-top: solid rgb(19, 17, 3);
-}

@@ -1,0 +1,29 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.2em;
+}
+
+.tweet-sender {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  border: none;
+  align-self: start;
+  font-family: bungee;
+  font-size: 24px;
+}
+
+.counter {
+  font-family: bungee;
+}
+
+#tweet-text {
+  height: 50px;
+  width: 100%;
+  font-weight: bold;
+  border-bottom: 3px solid #545149;
+  border: none;
+  background-color: inherit;
+  resize: none;
+  outline: none;
+}
