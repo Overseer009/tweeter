@@ -2,6 +2,7 @@ article {
   display: flex;
   flex-direction: column;
   margin-top: 1.5em;
+  margin-bottom: 2em;
   border: 3px solid #545149;
   padding: 0.5em;
 }
@@ -15,15 +16,20 @@ article header {
   justify-content: space-between;
 }
 
-.text {
+.tag {
+  color: skyblue;
   font-weight: bold;
-  padding: 1em;
 }
 
 article footer {
   display: flex;
   justify-content: space-between;
   border-top: 3px solid #545149;
+  padding: 0.3em;
+}
+
+.interactive {
+  color: darkblue;
 }
 
 .flag:hover {
