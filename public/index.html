@@ -28,16 +28,18 @@
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- Character Counter -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     
+    <!-- timeago -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+    <script type="text/javascript" src="/scripts/time.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-  <!-- timeago -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </head>
+    
+
 
   <body>
     <!-- Top nav bar (fixed) -->
@@ -82,7 +84,7 @@
           </header>
             <h5 class="text">"Tweet Messeges"</h5>
           <footer>
-            <span class="timeago" datetime="2016-07-07T09:24:17Z">July 07, 2016</span>
+            <span class="time"></span>
             <div class="interactive">
               <i class="fas fa-flag flag"></i>
               <i class="fas fa-retweet share"></i>
