@@ -1,0 +1,27 @@
+article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5em;
+  border: 3px solid #545149;
+  padding: 0.5em;
+}
+
+article:hover {
+  box-shadow: 6px 6px skyblue;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+}
+
+article.text {
+  font-weight: bold;
+  padding: 2em;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #545149;
+}

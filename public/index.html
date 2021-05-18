@@ -20,8 +20,11 @@
     <!-- Nav CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     
-    <!--New Tweet-->
+    <!-- New Tweet -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- Tweet Container -->
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -68,12 +71,20 @@
       </section>
       <article>
           <header>
-            <span>Name</span>
+            <div class="user"> 
+              <span>(Icon)</span>
+              <span>Name</span>
+            </div>
             <span>@Name</span>
           </header>
-            <span>"Tweet Messeges"</span>
+            <span class="text">"Tweet Messeges"</span>
           <footer>
-            span
+            <span>(date)</span>
+            <div class="interactive">
+              <span>(flag)</span>
+              <span>(share)</span>
+              <span>(love)</span>
+            </div>
           </footer>
       </article>
     </main>

@@ -21,8 +21,8 @@
   height: 50px;
   width: 100%;
   font-weight: bold;
-  border-bottom: 3px solid #545149;
   border: none;
+  border-bottom: 3px solid #545149;
   background-color: inherit;
   resize: none;
   outline: none;
