@@ -15,13 +15,25 @@ article header {
   justify-content: space-between;
 }
 
-article.text {
+.text {
   font-weight: bold;
-  padding: 2em;
+  padding: 1em;
 }
 
 article footer {
   display: flex;
   justify-content: space-between;
   border-top: 3px solid #545149;
+}
+
+.flag:hover {
+  color: red;
+}
+
+.share:hover {
+  color: red;
+}
+
+.love:hover {
+  color: red;
 }
