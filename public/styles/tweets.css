@@ -24,7 +24,7 @@ article header {
 article footer {
   display: flex;
   justify-content: space-between;
-  border-top: 3px solid #545149;
+  border-top: inherit;
   padding: 0.3em;
 }
 
@@ -32,14 +32,6 @@ article footer {
   color: darkblue;
 }
 
-.flag:hover {
-  color: red;
-}
-
-.share:hover {
-  color: red;
-}
-
-.love:hover {
+.flag:hover, .share:hover, .love:hover {
   color: red;
 }
