@@ -5,6 +5,11 @@
  */
 
 $(document).ready(function () {
+
+  $('#tweet-messenger').submit(function( event ) {
+    console.log(event);
+    event.preventDefault();
+  });
   
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
