@@ -7,8 +7,21 @@
 $(document).ready(function () {
 
   $('#tweet-messenger').submit(function( event ) {
-    console.log(event);
+    // console.log(event);
     event.preventDefault();
+
+    console.log($(this).serialize());
+
+    $.ajax({
+      method: "POST",
+      url: "/tweets",
+      data: $(this).serialize()
+    }).then((data) => {
+      console.log('data:', data);
+    }).catch((error) => {
+      console.log("error:", error);
+    })
+    
   });
   
   const renderTweets = function(tweets) {
