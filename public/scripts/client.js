@@ -1,14 +1,25 @@
 $(document).ready(function () {
-
   $('#tweet-messenger').submit(function( event ) {
     event.preventDefault();
-    $.ajax({
-      method: "POST",
-      url: "/tweets",
-      data: $(this).serialize()
-    }).then((data) => {
-      location.reload()
-    })
+
+    const tweetWordCount = event.target[0].value.length;
+    if(!tweetWordCount) {
+      alert("No Words? are you okay?")
+      return false;
+    } else if(tweetWordCount > 140) {
+      alert("I love that you have a lot to say! but no...")
+      return false;
+    } else {
+      $.ajax({
+        method: "POST",
+        url: "/tweets",
+        data: $(this).serialize()
+      }).then((data) => {
+        loadTweets()
+        $('#tweet-text').val("");
+        $('.counter').val(140)
+      })
+    }
   });
   
   const loadTweets = () => {
@@ -17,7 +28,6 @@ $(document).ready(function () {
       url: "/tweets"
     }).then((otherTweets) => {
       renderTweets(otherTweets);
-      
       timeago.render(document.querySelectorAll('.time'));
     })
   }
@@ -28,7 +38,6 @@ $(document).ready(function () {
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
-      console.log(newTweet);
       $('#tweets-container').prepend(newTweet);
     }
   };
