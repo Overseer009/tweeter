@@ -1,0 +1,17 @@
+#error-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5em;
+}
+
+#error-box {
+  width: 90%;
+  border: 5px solid darkorange;
+}
+
+#error-messeges {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color:  darkorange;
+}

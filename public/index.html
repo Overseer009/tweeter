@@ -25,6 +25,9 @@
 
     <!-- Tweet Container -->
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
+    <!-- Error -->
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
     
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -36,9 +39,6 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/time.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-  </head>
-    
 
 
   <body>
@@ -63,6 +63,15 @@
   </header>
 
     <!-- Page-specific (main) content here -->
+    <section id="error-container">
+      <div id="error-box">
+        <div id="error-messeges">
+          <i class="fas fa-exclamation-triangle warning"></i>
+            <h3>there are no characters</h3>
+          <i class="fas fa-exclamation-triangle warning"></i>
+        </div>
+      </div>
+    </section>
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
@@ -74,27 +83,7 @@
           </div>
         </form>
       </section>
-      <div id="tweets-container">
-        
-      </div>
-      <!-- <article>
-          <header>
-            <div class="user">
-              <img src="https://i.imgur.com/nlhLi3I.png"> 
-              <span>Name</span>
-            </div>
-            <span class="tag">@Name</span>
-          </header>
-            <h5 class="text">"Tweet Messeges"</h5>
-          <footer>
-            <span class="time"></span>
-            <div class="interactive">
-              <i class="fas fa-flag flag"></i>
-              <i class="fas fa-retweet share"></i>
-              <i class="fas fa-heart love"></i>
-            </div>
-          </footer>
-      </article> -->
+      <div id="tweets-container"></div>
     </main>
   </body>
 </html>

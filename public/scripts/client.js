@@ -41,6 +41,12 @@ $(document).ready(function () {
       $('#tweets-container').prepend(newTweet);
     }
   };
+  
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   const createTweetElement = (tweet) => {
     let $tweet = $(`
@@ -52,7 +58,7 @@ $(document).ready(function () {
         </div>
         <span class="tag">${tweet.user.handle}</span>
       </header>
-        <h5 class="text">${tweet.content.text}</h5>
+        <h5 class="text">${escape(tweet.content.text)}</h5>
       <footer>
         <span class="time" datetime="${tweet.created_at}"></span>
         <div class="interactive">
@@ -66,3 +72,23 @@ $(document).ready(function () {
     return $tweet;
   };
 })
+
+const $error2 = $(`
+  <div id="error-box">
+    <div id="error-messeges">
+      <span>*!*</span>
+        <h3>there are no characters</h3>
+      <span>*!*</span>
+    </div>
+  </div>
+  `)
+
+  const $error2 = $(`
+  <div id="error-box">
+    <div id="error-messeges">
+      <span>*!*</span>
+        <h3>there are no characters</h3>
+      <span>*!*</span>
+    </div>
+  </div>
+  `)
