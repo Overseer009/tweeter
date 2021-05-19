@@ -32,6 +32,7 @@ article footer {
   justify-content: space-between;
   border-top: inherit;
   padding: 0.3em;
+  font-size: small;
 }
 
 .interactive {

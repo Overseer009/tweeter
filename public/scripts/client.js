@@ -22,9 +22,9 @@ $(document).ready(function () {
           <img src="${tweet.user.avatars}"> 
           <span>"${tweet.user.name}"</span>
         </div>
-        <span class="tag">"${tweet.user.handle}"</span>
+        <span class="tag">${tweet.user.handle}</span>
       </header>
-        <h5 class="text">"${tweet.content.text}"</h5>
+        <h5 class="text">${tweet.content.text}</h5>
       <footer>
         <span class="time" datetime="${tweet.created_at}"></span>
         <div class="interactive">
@@ -62,6 +62,6 @@ $(document).ready(function () {
       "created_at": 1461113959088
     }
   ]
-
+  
   renderTweets(data);
 })
