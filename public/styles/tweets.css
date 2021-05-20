@@ -1,3 +1,6 @@
+
+/* the CSS for the old tweets and the newly posted tweets */
+
 article {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,5 @@
+/* the nav bar, the profile picture and name when using a device (modile device) */
+
 nav {
   display: flex;
   align-items: center;
@@ -9,6 +11,12 @@ nav {
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 0 1.5em;
+}
+
+.nav-compose {
+  background-color: inherit;
+  color: inherit;
+  border: none
 }
 
 .downarrow {
@@ -34,6 +42,8 @@ nav {
   color: aqua;
   font-size: 36px;
 }
+
+/* The media query for when viewing the page from a larger screen (Desktop) */
 
 @media only screen and (max-width: 1024px) {
   nav {
