@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -52,33 +55,35 @@
     </nav>
 
     <!-- Login Display -->
-    <header class="profile">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class="name">
-         <span><strong>Syn</strong> Aymerric</span>
-      </div>
-  </header>
-
-    <!-- Page-specific (main) content here -->
-    
-    <main class="container">
-      <section class="new-tweet">
-        <section id="error-container">
-
-        </section>
-        <h2>Compose Tweet</h2>
-        <form id="tweet-messenger" method="POST" action="/tweets/">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="details">
-            <button class="tweet-sender" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+    <section id="content">
+      <section id="profile-section">
+        <header class="profile">
+          <div>
+            <img src="/images/profile-hex.png"> 
           </div>
-        </form>
+          <br>
+          <div class="name">
+            <span><strong>Syn</strong> Aymerric</span>
+          </div>
+        </header>
       </section>
-      <div id="tweets-container"></div>
-    </main>
+    
+      <!-- Page-specific (main) content here -->
+    
+      <main class="composing-container">
+        <section class="new-tweet">
+          <section id="error-container"></section>
+          <h2>Compose Tweet</h2>
+          <form id="tweet-messenger" method="POST" action="/tweets/">
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="details">
+              <button class="tweet-sender" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <div id="tweets-container"></div>
+      </main>
+    </section>  
   </body>
 </html>

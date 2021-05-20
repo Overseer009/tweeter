@@ -97,8 +97,5 @@ const wordCheck = function(wordCount) {
   } else if (wordCount > 140) {
     errMsg = "Sorry, max is 140 characters. You got this!";
     return $error(errMsg).appendTo('#error-container').hide().slideDown(1000)
-  } else if ($("tweet-text").value.trim().length <= 0){
-    errMsg = "These are all spaces BRUH!";
-    return $error(errMsg).appendTo('#error-container').hide().slideDown(1000)
   }
 }
