@@ -1,3 +1,4 @@
+//character counter
 $(document).ready(function() {
   $('#tweet-text').on("input", function() {
     let countdown = 140 - this.value.length;
