@@ -6,9 +6,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screeshot of the desktop view of my tweeter"] ()
-!["Screeshot of the mobile view of my tweeter"] ()
-!["Screeshot of the error message"] ()
+- !["Screeshot of the desktop view of my tweeter"] (https://github.com/Overseer009/tweeter/blob/master/DOCS/Desktop.png)
+- !["Screeshot of the mobile view of my tweeter"] (https://github.com/Overseer009/tweeter/blob/master/DOCS/Device.png)
+- !["Screeshot of the error message"] (https://github.com/Overseer009/tweeter/blob/master/DOCS/Error.png)
 
 ## Getting Started
 
