@@ -63,17 +63,12 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <section id="error-container">
-      <div id="error-box">
-        <div id="error-messeges">
-          <i class="fas fa-exclamation-triangle warning"></i>
-            <h3>there are no characters</h3>
-          <i class="fas fa-exclamation-triangle warning"></i>
-        </div>
-      </div>
-    </section>
+    
     <main class="container">
       <section class="new-tweet">
+        <section id="error-container">
+
+        </section>
         <h2>Compose Tweet</h2>
         <form id="tweet-messenger" method="POST" action="/tweets/">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>

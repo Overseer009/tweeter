@@ -1,14 +1,12 @@
 $(document).ready(function () {
   $('#tweet-messenger').submit(function( event ) {
     event.preventDefault();
-
+    
     const tweetWordCount = event.target[0].value.length;
-    if(!tweetWordCount) {
-      alert("No Words? are you okay?")
-      return false;
-    } else if(tweetWordCount > 140) {
-      alert("I love that you have a lot to say! but no...")
-      return false;
+    console.log("word count:", tweetWordCount);
+
+    if (wordCheck(tweetWordCount)) {
+      return false
     } else {
       $.ajax({
         method: "POST",
@@ -17,9 +15,10 @@ $(document).ready(function () {
       }).then((data) => {
         loadTweets()
         $('#tweet-text').val("");
-        $('.counter').val(140)
+        $('.counter').val(140);
       })
     }
+    
   });
   
   const loadTweets = () => {
@@ -73,22 +72,33 @@ $(document).ready(function () {
   };
 })
 
-const $error2 = $(`
-  <div id="error-box">
-    <div id="error-messeges">
-      <span>*!*</span>
-        <h3>there are no characters</h3>
-      <span>*!*</span>
-    </div>
-  </div>
-  `)
 
-  const $error2 = $(`
-  <div id="error-box">
-    <div id="error-messeges">
-      <span>*!*</span>
-        <h3>there are no characters</h3>
-      <span>*!*</span>
+const $error = function (message) {
+  const err = $(`
+    <div id="error-box">
+      <div id="error-messeges">
+        <i class="fas fa-exclamation-triangle"></i>
+        <h3>${message}</h3>
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
     </div>
-  </div>
-  `)
+  `).appendTo('#error-container')
+  return err
+}
+
+const wordCheck = function(wordCount) {
+  let errMsg = undefined
+  if ($('#error-box').length){;
+    $('#error-box').remove();
+  }
+  if (!wordCount) {
+    errMsg = "No Words? don't worry we'll wait...";
+    return $error(errMsg).appendTo('#error-container').hide().slideDown(1000)
+  } else if (wordCount > 140) {
+    errMsg = "Sorry, max is 140 characters. You got this!";
+    return $error(errMsg).appendTo('#error-container').hide().slideDown(1000)
+  } else if ($("tweet-text").value.trim().length <= 0){
+    errMsg = "These are all spaces BRUH!";
+    return $error(errMsg).appendTo('#error-container').hide().slideDown(1000)
+  }
+}
