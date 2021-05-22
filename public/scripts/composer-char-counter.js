@@ -4,6 +4,10 @@ $(document).ready(function() {
     const countdown = 140 - this.value.length;
     const counter = $(this).siblings().children('.counter');
     counter.html(countdown);
-    counter.css('color',  countdown < 0 ? 'red' : '#545149');
+    if (countdown < 0) {
+      $("output").addClass("error")
+    } else (
+      $("output").removeClass("error")
+    )
   });
 });

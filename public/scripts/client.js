@@ -100,7 +100,6 @@ const $error = function(message) {
 const wordCheck = function(wordCount) {
   let errMsg = undefined;
   if ($('#error-box').length) {
-
     $('#error-box').remove();
   }
   if (!wordCount) {
@@ -110,4 +109,4 @@ const wordCheck = function(wordCount) {
     errMsg = "Sorry, max is 140 characters. You got this!";
     return $error(errMsg).appendTo('#error-container').hide().slideDown(1000);
   }
-};
+}

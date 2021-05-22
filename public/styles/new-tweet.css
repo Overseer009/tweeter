@@ -17,6 +17,11 @@
 
 .counter {
   font-family: bungee;
+  color: #545149
+}
+
+.error {
+  color: red;
 }
 
 #tweet-text {
