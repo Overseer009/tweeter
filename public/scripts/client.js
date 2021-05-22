@@ -42,6 +42,7 @@ $(document).ready(function() {
   
   //appends the new tweets in reverse chronological order
   const renderTweets = function(tweets) {
+    $('#tweets-container').empty();
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
       $('#tweets-container').prepend(newTweet);
