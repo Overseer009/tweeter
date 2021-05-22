@@ -1,7 +1,7 @@
 //character counter
 $(document).ready(function() {
   $('#tweet-text').on("input", function() {
-    let countdown = 140 - this.value.length;
+    const countdown = 140 - this.value.length;
     const counter = $(this).siblings().children('.counter');
     counter.html(countdown);
     counter.css('color',  countdown < 0 ? 'red' : '#545149');

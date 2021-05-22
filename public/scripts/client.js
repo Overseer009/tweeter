@@ -43,22 +43,22 @@ $(document).ready(function() {
   //appends the new tweets in reverse chronological order
   const renderTweets = function(tweets) {
     $('#tweets-container').empty();
-    for (let tweet of tweets) {
-      let newTweet = createTweetElement(tweet);
+    for (const tweet of tweets) {
+      const newTweet = createTweetElement(tweet);
       $('#tweets-container').prepend(newTweet);
     }
   };
   
   //prevents melicious action against my app
   const escape = function(str) {
-    let div = document.createElement("div");
+    const div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
   //the HTML that becomes the new Tweets
   const createTweetElement = (tweet) => {
-    let $tweet = $(`
+    const $tweet = $(`
     <article>
       <header>
         <div class="user">

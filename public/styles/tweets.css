@@ -25,6 +25,10 @@ article header {
   align-items: center;
 }
 
+.text {
+  overflow-wrap: break-word;
+}
+
 .tag {
   color: skyblue;
   font-weight: bold;
